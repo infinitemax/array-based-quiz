@@ -4,11 +4,12 @@ h1 {
 
 
 button {
+    margin-bottom: 10px;
     border-radius: 25px;
     border-width: 2px;
     border-color: cadetblue;
     width: 150px;
-    margin-bottom: 10px;
+    background-color: rgb(56, 221, 221);
 }
 
 button:hover {

@@ -12,15 +12,18 @@
     <div class="grid grid-cols-2 bg-teal-300 rounded-2xl px-12 py-6 w-[580px] mx-auto mt-12" id="quiz">
         <h1 class="col-span-2 text-3xl">This is the quiz</h1>
         <p class="col-span-2 text-xl py-8" id="question">This is where the question text goes</p>
-        <button id="choice0">Option 1</button>
-        <button id="choice1">Option 2</button>
-        <button id="choice2">Option 3</button>
-        <button id="choice3">Option 4</button>
+        <button class="choiceBtn" id="choice0">Option 1</button>
+        <button class="choiceBtn" id="choice1">Option 2</button>
+        <button class="choiceBtn" id="choice2">Option 3</button>
+        <button class="choiceBtn" id="choice3">Option 4</button>
     </div>
 
+    <button onclick="populate()">populate</button>
 
 
 
+    <script src="question.js"></script>
+    <script src="quiz-controller.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
