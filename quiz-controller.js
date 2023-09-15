@@ -7,7 +7,7 @@ function Quiz(questions){
     this.answerRecord = [];
 }
 
-// needs methods to get the current index, check if the quiz has ended and...
+// needs methods to get the current index, check if the quiz has ended and to manage an attempt
 
 // returns the current question, accessing the question index using the current questionIndex
 // see what happens when we remove this.
@@ -25,14 +25,12 @@ Quiz.prototype.hasQuizEnded = function() {
 Quiz.prototype.attempt = function(guess) {
     this.questionIndex++;
 
-    this.answerRecord.push(guess);
-
-    // this bit is my code - different to the one in the video, I will implement theirs, then try mine. I think it's basically the same, he's just using the function to access the question, whereas I'm writing it out in the if statement.
-    // if (this.questions[this.questionIndex].checkAnswer(guess)) {
-    //     this.score++
-    // }
+    this.answerRecord[this.questionIndex] = guess;
 
     if(this.getQuestion().checkAnswer(guess)){
-        this.score;
+        this.score++;
+        console.log("correct")
+    } else {
+        console.log("incorrect");
     }
 }
