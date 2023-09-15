@@ -14,5 +14,6 @@ function Question(question, answers, correctAnswer){
 // also save guess in the object so we can later see where they went wrong.
 Question.prototype.checkAnswer = function(guess) {
     this.guess = guess;
+    console.log("hello")
     return correctAnswer === guess;
 }

@@ -53,6 +53,9 @@ questionSet.forEach((question) => {
 // create new quiz object
 const quiz = new Quiz(todaysQuestions);
 
+// get array of buttons
+const buttons = document.querySelectorAll(".choiceBtn");
+
 // populate the quiz
 const populate = () => {
     // TO DO: check if quiz has ended
@@ -60,12 +63,23 @@ const populate = () => {
     // populate quesiton
     let question = document.getElementById("question");
     question.innerHTML = quiz.questions[quiz.questionIndex].questionText;
-
+    
     // populate answer buttons
-    const buttons = document.querySelectorAll(".choiceBtn");
     buttons.forEach((button, index) => {
+        // give buttons the options
         const answer = quiz.getQuestion().answerOptions[index];
         button.innerHTML = answer;
-        console.log(`index is ${index}, answer is ${answer}`);
+        // give buttons the accept guess function
+        button.addEventListener("click", function() {
+            question.checkAnswer(buttons[index].innerHTML)
+
+            /////// I'M HERE, TRYING TO GET THE QUIZ TO CHECK AN ANSWER BASED ON WHAT'S BEEN CLICKED.
+        });
     });
 };
+
+// accept a guess and check answer
+
+const acceptGuess = (guess) => {
+    console.log(guess)
+}
