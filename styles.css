@@ -1,0 +1,16 @@
+h1 {
+    font-size: 3rem;
+}
+
+
+button {
+    border-radius: 25px;
+    border-width: 2px;
+    border-color: cadetblue;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: cadetblue;
+}
